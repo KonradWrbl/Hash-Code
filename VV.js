@@ -16,7 +16,7 @@ const input = [{
 {
     id: 3,
     tagsNumber: 2,
-    tags: ["garden", "cat", 'ballon', 'mouse'],
+    tags: ["garden", "cat", 'ballon', 'mouse', 'sun'],
 },
 {
     id: 4,
@@ -36,7 +36,7 @@ const input = [{
 {
     id: 7,
     tagsNumber: 2,
-    tags: ["garden", 'sun'],
+    tags: ["ballon", 'sun'],
 },
 ];
 
@@ -53,10 +53,11 @@ let VV = (input) => {
             connection = tab[0].tags.length+tab[y].tags.length-pointsoftree(tab[0].tags, tab[y].tags);
             if(connection ==  bestConnection) {
                 bestConnection = connection;
-                i=y;
-            }else if(connection >  bestConnection) {
+                i=y-1;
+            }
+            else if(connection > bestConnection) {
                 bestConnection = connection;
-                i=y;
+                i=y-1;
             }
         }
 
@@ -83,8 +84,7 @@ let pointsoftree = (firstTab, scndTab) => {
             }
         }
     }
-
-    return existInFirstTab+existInScndTab;
+    return existInBoth;
 }
 
 VV(input);
