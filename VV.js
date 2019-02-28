@@ -16,7 +16,7 @@ const input = [{
 {
     id: 3,
     tagsNumber: 2,
-    tags: ["garden", "cat"],
+    tags: ["garden", "cat", 'ballon', 'mouse'],
 },
 {
     id: 4,
@@ -31,33 +31,16 @@ const input = [{
 {
     id: 6,
     tagsNumber: 2,
-    tags: ["garden", "cat"],
+    tags: ["garden", "cat", 'mouse'],
 },
 {
     id: 7,
     tagsNumber: 2,
-    tags: ["garden", "cat", 'sun'],
+    tags: ["garden", 'sun'],
 },
 ];
 
 var slides = [];
-
-let slideVV = (input) => {
-    let tab = input;
-    for(let x = 1; x<tab.length; tab++){
-        tab.tags[0].length
-    }
-}
-
-
-
-
-
-
-
-
-
-
 
 let VV = (input) => {
     let tab = input;
@@ -82,8 +65,6 @@ let VV = (input) => {
 
         tab.splice(0,1);
         tab.splice(i-1,1);
-
-        console.log(connection);
 
         if(tab.length==0) break;
     }
